@@ -26,4 +26,18 @@ public class LinkedList {
         }
     }
 
+    public void remove(int data){
+        if(head==null){
+            System.out.println("List is Empty");
+            return;
+        }
+        Node current = head;
+        Node prev=null;
+        while(current!=null && current.data!=data){
+            prev=current;
+            current=current.next;
+        }
+        prev.next=current.next;
+    }
+
 }
